@@ -51,7 +51,7 @@ console.log(arrayBound);
 // console.log('Result: ' + sumOfElements);
 
 
-// const numbers = [11, 22, 33, 55, 66];
+// GTX 650 1GB
 
 // const arr = numbers;
 
@@ -99,11 +99,19 @@ console.log(arrayBound);
 
 const numbers = [11, 22, 33, 55, 66];
 
-const a = number[0];
-const b = numbers[1];
+// const a = numbers[0];
+// const b = numbers[1];
 
-console.log(a, b)
+// const [a, b, ...arr] = numbers;
 
+// console.log(a, b, [1, 2, 3, ...arr, 6, 777]);
+
+function swap(arr){
+    const [start, ...rest] = arr;
+
+    return[...rest, start];
+};
+console.log(swap(numbers));
 
 
 
