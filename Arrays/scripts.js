@@ -77,7 +77,7 @@ console.log(arrayBound);
 // console.log(people.length);
 
 
-                            //primer
+                            
   // from , to => [% 3 === 0]
 
 //   function getSpecialNumbers(from , to){
@@ -95,7 +95,6 @@ console.log(arrayBound);
 //   const specialNumbers = getSpecialNumbers(10, 30 );
 //   console.log(specialNumbers)
 
-////////////////////////  spread и деструктуризация
 
 const numbers = [11, 22, 33, 55, 66];
 
