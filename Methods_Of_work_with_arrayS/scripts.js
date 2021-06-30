@@ -6,7 +6,7 @@
 // console.log(getSpecialNumbers(arr));
 // console.log(arr);
 
-/*unsorted array => sorted array*/
+//                unsorted array  ==> sorted array
 
 // const sortArray = numbers =>
 
