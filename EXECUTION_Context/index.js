@@ -1,3 +1,4 @@
+'use strict';
 // const user = {
 //     name: 'Doe',
 //     sayHi(age, message) {
@@ -33,19 +34,47 @@
 
 // // // defer(func, ms) => Function
 
-function defer(func, ms) {
-    return function() {
-        setTimeout(() => func.apply(this, arguments), ms)
+// function defer(func, ms) {
+//     return function() {
+//         setTimeout(() => func.apply(this, arguments), ms)
+//     }
+// }
+
+// const user = {
+//     name: 'Tom',
+//     sayHi() {
+//         console.log(`Hi, I'm ${this.name}!`)
+//     }
+// }
+
+// const deferredHi = defer(user.sayHi, 1000);
+
+// deferredHi.call({ name: 'Bob' });
+
+// //// / / / / / // // / / strict mode// //  / / // / // / / / // // / /  / /// /  / / /  // / / / / / / / / 
+
+// const user = {
+//     name: 'Tom',
+//     sayHi() {
+//         console.log(this);
+//     },
+// };
+
+// setTimeout(() => user.sayHi(), 100);
+
+const event = {
+    guests: [
+        { name: 'Tom', email: 'a@gmail.com', age: 17 },
+        { name: 'Bob', email: 'b@gmail.com', age: 18 }
+    ],
+    message: 'Welcome to the party',
+    getInvintations() {
+        return this.guests
+            .filter(({ age }) => age >= 18)
+            .map(({ name, email }) => ({
+                text: `Hi ${name}. ${this.message}`,
+                email
+            }));
     }
 }
-
-const user = {
-    name: 'Tom',
-    sayHi() {
-        console.log(`Hi, I'm ${this.name}!`)
-    }
-}
-
-const deferredHi = defer(user.sayHi, 1000);
-
-deferredHi.call({ name: 'Bob' });
+console.log(event.getInvintations());
