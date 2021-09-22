@@ -10,7 +10,7 @@ const isRequired = value => value
 
 const isEmail = value => value.includes('@')
     ? undefined
-    : 'Shold be an email';
+    : 'Should be an email';
 
 const validatorsByField = {
     email: [isRequired, isEmail],

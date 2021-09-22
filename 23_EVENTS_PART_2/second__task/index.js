@@ -3,7 +3,6 @@ const generateNumbersRange = (from, to) => {
     for (let i = from; i <= to; i++) {
         result.push(i);
     }
-
     return result;
 };
 
